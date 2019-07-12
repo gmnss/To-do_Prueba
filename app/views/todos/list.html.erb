@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1> Tareas Imcompletas </h1>
+      <% @todos.each do |check| %>
+      <% if check.completed == false %>
+      <%= link_to check.description, check %>
+      <hr>
+      <% end %>
+      <% end %>
+    </div>
+
+    <div class="col-md-6">
+      <h1> Tareas completadas </h1>
+      <% @todos.each do |check| %>
+      <% if check.completed == true %>
+      <%= link_to check.description, check %>
+      <hr>
+      <% end %>
+      <% end %>
+    </div>
+
+</div>

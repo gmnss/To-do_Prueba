@@ -1,0 +1,7 @@
+<%= form_with model: @todo, local: true do |todo| %>
+ <%= todo.label :description, 'Ingrese la tarea' %>
+ <%= todo.text_field :description %>
+ <%= todo.label :completed, 'Tarea completada' %>
+ <%= todo.check_box :completed %>
+ <%= todo.submit "Crear" %>
+<% end %>

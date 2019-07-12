@@ -1,0 +1,12 @@
+
+    <% @todos.each do |check| %>
+    <div class="card-header">
+    <%=check.description %>
+    <!-- <%=check.completed %> -->
+    <%=link_to 'Ver', check %>
+    <%=link_to 'Modificar', todo_edit_path(check) %>
+    <%=link_to 'Borrar', check, method: :delete %>
+    <%=link_to 'Completado', todo_completed_path(check), method: :post %>
+    </div>
+    <% end %>
+<%=link_to 'Nueva tarea', todos_new_path %>
